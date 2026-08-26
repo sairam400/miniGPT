@@ -6,6 +6,6 @@ The project includes three model sizes, starting with a CPU-friendly configurati
 
 Building each layer made concepts such as causal masking, weight tying, learning-rate warmup, and next-token prediction much more concrete. My next experiments will be rotary positional embeddings, a KV cache for faster generation, and BPE tokenization.
 
-Repository: <ADD_YOUR_REPOSITORY_URL>
+Repository: https://github.com/sairam400/miniGPT
 
 #PyTorch #MachineLearning #DeepLearning #GenerativeAI #Transformers #Python #BuildInPublic
