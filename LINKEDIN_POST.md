@@ -1,11 +1,11 @@
-I built a GPT-style language model from scratch with PyTorch.
+I've been trying to understand transformers beyond just calling an API, so I built a small GPT-style language model from scratch in PyTorch.
 
-Instead of relying on Hugging Face or a prebuilt transformer, I implemented the core pieces directly: causal multi-head self-attention, transformer blocks, positional embeddings, residual connections, a feed-forward network, training and evaluation loops, checkpointing, and autoregressive text generation.
+It's intentionally simple: character-level tokenization, causal self-attention, positional embeddings, transformer blocks, and an autoregressive generation loop. The smallest configuration has about 500K parameters and can be trained on CPU using the Tiny Shakespeare dataset.
 
-The project includes three model sizes, starting with a CPU-friendly configuration of roughly 500K parameters. It uses character-level tokenization and can train on Shakespeare or any plain-text corpus.
+The most useful part was implementing the attention mask and training loop myself. Seeing how the tensor shapes move through the model made the architecture much less abstract.
 
-Building each layer made concepts such as causal masking, weight tying, learning-rate warmup, and next-token prediction much more concrete. My next experiments will be rotary positional embeddings, a KV cache for faster generation, and BPE tokenization.
+There's still plenty to improve. I'd like to add a KV cache, experiment with RoPE, and replace the character tokenizer with BPE next.
 
-Repository: https://github.com/sairam400/miniGPT
+Code: https://github.com/sairam400/miniGPT
 
-#PyTorch #MachineLearning #DeepLearning #GenerativeAI #Transformers #Python #BuildInPublic
+#PyTorch #MachineLearning #DeepLearning #Transformers #Python
